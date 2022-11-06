@@ -3,9 +3,8 @@ Trabajo de fin de Unidad 1 - Silabuz
 
 Integrantes:
 
--
--
-
+- Daniel Escriba
+- Vinzet Ramos
 
 
 Consideraciones
@@ -16,8 +15,11 @@ Deadline: Domingo 6 de Noviembre 11:59 p.m.
 Uso de 1 repositorio github para las 2 tareas. Cada tarea es un script (archivo .py).
 Se van a evaluar los commits, es decir 1 solo commit en total para un repositorio no es aceptado.
 Trabajo en grupo con alumnos de la misma aula (mínimo 2, máximo 3 personas), no se aceptan proyectos individuales.
-Cada alumno debe trabajar en una parte de cada una de las 2 tareas. Es decir, no puede haber 1 alumno que haga solo 1 tarea y el resto haga la otra. Se deben trabajar en ramas y la rama main es la que recibe los aportes de las otras.
+Cada alumno debe trabajar en una parte de cada una de las 2 tareas. Es decir, no puede haber 1 alumno que haga solo 1 
+tarea y el resto haga la otra. Se deben trabajar en ramas y la rama main es la que recibe los aportes de las otras.
 La presentación del trabajo será indicada en la plataforma de Silabuz.
+
+
 Tareas
 Debe desarrollar las siguientes 2 tareas en un repositorio de github. Cada tarea es un archivo .py
 
@@ -27,6 +29,7 @@ Se tiene la clase Libro con los siguientes atributos: id, título, género, ISBN
 Se solicita escribir un programa en Python que permita registrar libros. Debe utilizar: colecciones (listas, tuplas, etc), funciones y clases de Python.
 
 Dicho programa debe tener un menu (a interactuar en la línea de comando) para:
+
 
 Opción 1: Leer archivo de disco duro (.txt o csv) que cargue 3 libros.
 Opción 2: Listar libros.
@@ -39,6 +42,7 @@ Opción 8: Buscar libros por número de autores. Se debe ingresar un número por
 Opción 9: Editar o actualizar datos de un libro (título, género, ISBN, editorial y autores).
 Opción 10: Guardar libros en archivo de disco duro (.txt o csv).
 Nota: listar libros involucra: título, género, ISBN, editorial y autor(es)
+
 
 Tarea 2
 La tarea gira en torno a la PokeAPI: https://pokeapi.co/docs/v2 utilizar la API v2 y el paquete requests de Python
