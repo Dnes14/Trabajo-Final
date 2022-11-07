@@ -57,4 +57,89 @@ def mostrar_op1_2_4(pi,ka):
         numpoke.append(int(a))
     
     return sorted(numpoke)
+
+def mostrar_op3_5(pi,ka):
+    response=requests.get(url_pokeapi+pi+"/"+ka)
+    data=response.json()
+    limpiaurl = 'https://pokeapi.co/api/v2/pokemon/'
+    pokem = [pokem['pokemon']['url'].replace(limpiaurl,'') for pokem in data['pokemon']]
+
+    numpoke=[]
+    for i in pokem:
+        a=i.replace("/",'')
+        numpoke.append(int(a))
+    
+    return sorted(numpoke)
+
+
+def obtener_pokemon(yoteelijo):
+
+    url_pokeapi = 'https://pokeapi.co/api/v2/pokemon/'
+    response = requests.get(url_pokeapi + str(yoteelijo))
+    data = response.json()
+
+    print('========================='*2)
+
+    print(f"\nNombre:\t\t {data['name']}")
+    
+    lista_habilidades = [habilidad['ability']['name'] for habilidad in data['abilities']]
+    print(f"Habilidades:\t {lista_habilidades}")
+    print(f"Imagen:\t\t {data['sprites']['other']['official-artwork']['front_default']}")
+    print('\n')
+
+    return
+    
+
+
+inicio=intro()
+
+while inicio != 'Exit':
+    if inicio == 'generation':
+        reto=obt_opciones(inicio)
+        pok=mostrar_op1_2_4(inicio,reto)
+
+        for pokemon in pok:
+           obtener_pokemon(pokemon)
+
+        input("\nPresione una tecla , para terminar!")
+        break
+
+    elif inicio == 'pokemon-color':
+        reto=obt_opciones(inicio)
+        pok=mostrar_op1_2_4(inicio,reto)
+        for pokemon in pok:
+            obtener_pokemon(pokemon)
+        input("\nPresione una tecla , para terminar!")
+        break
+    elif inicio == 'ability':
+        reto=obt_opciones(inicio)
+        pok=mostrar_op3_5(inicio,reto)
+        for pokemon in pok:
+            obtener_pokemon(pokemon)
+        input("\nPresione una tecla , para terminar!")
+        break
+         
+    elif inicio == 'pokemon-habitat':
+        reto=obt_opciones(inicio)
+        pok=mostrar_op1_2_4(inicio,reto)
+        for pokemon in pok:
+            obtener_pokemon(pokemon)
+        input("\nPresione una tecla , para terminar!")
+        break
+        
+    elif inicio == 'type':
+        reto=obt_opciones(inicio)
+        pok=mostrar_op3_5(inicio,reto)
+        for pokemon in pok:
+            obtener_pokemon(pokemon)
+        input("\nPresione una tecla , para terminar!")
+        break
+
+print('\n==================================================')
+print('\n\tHasta la Proxima :D ')
+time.sleep(4)
+os.system('cls')
+
+
+
     
