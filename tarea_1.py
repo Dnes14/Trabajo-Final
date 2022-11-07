@@ -50,3 +50,45 @@ def abrir_fichero():
 def listarlibros(argumeto):
     for i in argumeto:
         print(i)
+        
+def agregarlibro(id,List3):
+
+    autores=[]   
+    nom=input("\nIngrese el [TITULO] del Libro:\t\t\t ")
+    gene=input("\nIngrese el [GENERO] del Libro:\t\t\t ")
+    IS=input("\nIngrese el [ISBN] del Libro:\t\t\t ")
+    Edit=input("\nIngrese la [EDITORIAL] del Libro:\t\t ")
+    cant=input("\nIngrese la [Cantidad] de Autores:\t\t ")
+
+    if int(cant)>1:
+        for i in range (cant):
+            auts=input(f"\nIngrese el autor N:{i+1} :\t\t ")
+            autores.append(auts)
+    elif int(cant)==1:
+        auts=input("\nIngrese el autor :\t\t ")
+        autores.append(auts)
+    else:
+        autores.append("Desconocido")
+                
+    List3.append(Libro(id,nom,gene,IS,Edit,autores))
+    return List3
+    
+def sacar_libro(lista2):
+    print('Eliga la opcion para sacar el libro')
+
+    a=0
+    for item in lista2:
+
+        print(lista2[a].id,"-->",lista2[a].titulo)
+        a=a+1
+
+    retira=input('numero de id a retirar')
+   # index = lista2.id.index(retira)
+    a=0
+    for item in lista2:
+
+        if lista2[a].id==retira:
+          lista2.pop(a)  
+        a=a+1
+
+    return lista2
