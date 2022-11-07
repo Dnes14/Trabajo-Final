@@ -101,7 +101,7 @@ while inicio != 'Exit':
         for pokemon in pok:
            obtener_pokemon(pokemon)
 
-        input("\nPresione una tecla , para terminar!")
+        input("\nPresione [Enter] , para terminar!")
         break
 
     elif inicio == 'pokemon-color':
@@ -109,14 +109,14 @@ while inicio != 'Exit':
         pok=mostrar_op1_2_4(inicio,reto)
         for pokemon in pok:
             obtener_pokemon(pokemon)
-        input("\nPresione una tecla , para terminar!")
+        input("\nPresione [Enter] , para terminar!")
         break
     elif inicio == 'ability':
         reto=obt_opciones(inicio)
         pok=mostrar_op3_5(inicio,reto)
         for pokemon in pok:
             obtener_pokemon(pokemon)
-        input("\nPresione una tecla , para terminar!")
+        input("\nPresione [Enter] , para terminar!")
         break
          
     elif inicio == 'pokemon-habitat':
@@ -124,7 +124,7 @@ while inicio != 'Exit':
         pok=mostrar_op1_2_4(inicio,reto)
         for pokemon in pok:
             obtener_pokemon(pokemon)
-        input("\nPresione una tecla , para terminar!")
+        input("\nPresione [Enter], para terminar!")
         break
         
     elif inicio == 'type':
@@ -132,7 +132,7 @@ while inicio != 'Exit':
         pok=mostrar_op3_5(inicio,reto)
         for pokemon in pok:
             obtener_pokemon(pokemon)
-        input("\nPresione una tecla , para terminar!")
+        input("\nPresione [Enter] , para terminar!")
         break
 
 print('\n==================================================')
